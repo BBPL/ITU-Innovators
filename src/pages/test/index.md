@@ -3,7 +3,7 @@ templateKey: test
 title: TTT
 members:
   - name: Marek Kisiel
-    position: ieohfoia
+    position: nej
     studies: awioeahdoiw
 ---
 
