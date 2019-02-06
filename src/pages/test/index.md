@@ -1,6 +1,5 @@
 ---
-templateKey: "test"
-path: /test
+templateKey: test
 title: Test Page
 members:
   - name: "Marek Kisiel"
@@ -16,11 +15,3 @@ members:
       alt: Profile picture
       image: /img/coffee.png
 ---
-
-### This test
-
-Let us see what will happen
-
-### My new title
-
-another
