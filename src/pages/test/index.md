@@ -2,7 +2,10 @@
 templateKey: test
 title: Test Page
 members:
-  - name: Matthias Als
+  - image:
+      alt: Hello
+      image: /img/apple-touch-icon.png
+    name: Matthias Als
     position: Chairman
     studies: SWU 6th semester
   - name: Marek Kisiel
