@@ -4,12 +4,15 @@ import TeamMember from "./TeamMember";
 
 const ListMembers = ({ data }) => (
   <div>
-    {data.map(item => (
-      <TeamMember
-        name={item.name}
-        position={item.position}
-        studies={item.studies}
-      />
+    {data.map((item, i) => (
+      <div key={i}>
+        <TeamMember
+          name={item.name}
+          position={item.position}
+          studies={item.studies}
+          imageInfo={item.imageInfo}
+        />
+      </div>
     ))}
   </div>
 );
@@ -17,6 +20,7 @@ const ListMembers = ({ data }) => (
 ListMembers.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
+      image: PropTypes.object,
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string

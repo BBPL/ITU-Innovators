@@ -32,6 +32,7 @@ TestPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   members: PropTypes.arrayOf(
     PropTypes.shape({
+      imageInfo: PropTypes.object,
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
@@ -41,6 +42,7 @@ TestPageTemplate.propTypes = {
 
 const TestPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log(post);
 
   return (
     <Layout>
@@ -67,6 +69,16 @@ export const testPgeQuery = graphql`
       frontmatter {
         title
         members {
+          imageInfo {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
           name
           position
           studies
