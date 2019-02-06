@@ -50,7 +50,7 @@ collections:
                 {label: "Position", name: "position", widget: string},
                 {label: "Studies", name: "studies", widget: string},
               ]
-          }
+            }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
