@@ -22,7 +22,7 @@ export const TestPageTemplate = ({
         <PageContent className="content" content={content} />
         {console.log(content)}
         <ListMembers data={members} />
-        {console.log(members.toJS())}
+        {console.log(members)}
       </div>
     </section>
   );
