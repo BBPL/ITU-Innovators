@@ -10,7 +10,7 @@ const ListMembers = ({ data }) => (
           name={item.name}
           position={item.position}
           studies={item.studies}
-          imageInfo={item.imageInfo}
+          imageInfo={item.image}
         />
       </div>
     ))}
@@ -20,7 +20,7 @@ const ListMembers = ({ data }) => (
 ListMembers.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
