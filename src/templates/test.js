@@ -20,9 +20,7 @@ export const TestPageTemplate = ({
       </div>
       <div>
         <PageContent className="content" content={content} />
-        {console.log(content)}
         <ListMembers data={members} />
-        {console.log(members)}
       </div>
     </section>
   );
@@ -32,7 +30,13 @@ TestPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  members: PropTypes.instanceOf(ListMembers)
+  members: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      position: PropTypes.string,
+      studies: PropTypes.string
+    })
+  )
 };
 
 const TestPage = ({ data }) => {

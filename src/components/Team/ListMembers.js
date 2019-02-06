@@ -15,7 +15,13 @@ const ListMembers = ({ data }) => (
 );
 
 ListMembers.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.instanceOf(TeamMember))
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      position: PropTypes.string,
+      studies: PropTypes.string
+    })
+  )
 };
 
 export default ListMembers;
