@@ -3,10 +3,12 @@ templateKey: "test"
 path: /test
 title: Test Page
 members:
-  - name: "Marek Kisiel"
+  - member:
+    name: "Marek Kisiel"
     position: "Vice chairman"
     studies: "SWU 6th semester"
-  - name: "Matthias Als"
+  - member:
+    name: "Matthias Als"
     position: "Chairman"
     studies: "SWU 6th semester"
 ---

@@ -5,7 +5,7 @@ import { TestPageTemplate } from "../../templates/test";
 const TestPagePreview = ({ entry, getAsset }) => {
   const entryListMembers = entry.getIn(["name", "position", "studies"]);
   const listMembers = entryListMembers ? entryListMembers.toJS() : [];
-
+  console.log(listMembers);
   return (
     <TestPageTemplate
       title={entry.getIn(["data", "title"])}

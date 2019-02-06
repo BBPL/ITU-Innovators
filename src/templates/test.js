@@ -22,6 +22,7 @@ export const TestPageTemplate = ({
         <PageContent className="content" content={content} />
         {console.log(content)}
         <ListMembers data={members} />
+        {console.log(members)}
       </div>
     </section>
   );
@@ -31,13 +32,7 @@ TestPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  members: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      position: PropTypes.string,
-      studies: PropTypes.string
-    })
-  )
+  members: PropTypes.instanceOf(ListMembers)
 };
 
 const TestPage = ({ data }) => {
@@ -49,7 +44,7 @@ const TestPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
-        members={post.frontmatter.members}
+        members={post.frontmatter.members.name}
       />
     </Layout>
   );
