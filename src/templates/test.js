@@ -32,7 +32,7 @@ TestPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   members: PropTypes.arrayOf(
     PropTypes.shape({
-      imageInfo: PropTypes.object,
+      imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
@@ -42,7 +42,6 @@ TestPageTemplate.propTypes = {
 
 const TestPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post);
 
   return (
     <Layout>

@@ -20,7 +20,7 @@ const ListMembers = ({ data }) => (
 ListMembers.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.object,
+      imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
