@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import HeroBanner from '../components/HeroBanner';
 
 export const BlogPostTemplate = ({
   content,
@@ -13,6 +14,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  url,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -27,6 +29,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
+            <HeroBanner url={url} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -52,6 +55,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  url: PropTypes.string,
 }
 
 const BlogPost = ({ data }) => {
