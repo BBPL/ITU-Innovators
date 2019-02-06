@@ -41,16 +41,11 @@ collections:
             label: "Members",
             name: "Members",
             widget: list,
-            field: {
-              label: "Member",
-              name: "member",
-              widget: object,
-              fields: [
+            fields: [
                 {label: "Name", name: "name", widget: string},
                 {label: "Position", name: "position", widget: string},
                 {label: "Studies", name: "studies", widget: string},
-              ],
-            }
+            ],
           }
       - file: "src/pages/about/index.md"
         label: "About"
