@@ -1,8 +1,9 @@
 ---
 templateKey: test
 title: TTT
-Members:
-  - name: Matthias Als
+members:
   - name: Marek Kisiel
+    position: ieohfoia
+    studies: awioeahdoiw
 ---
 
