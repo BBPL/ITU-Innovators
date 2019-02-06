@@ -22,7 +22,7 @@ export const TestPageTemplate = ({
         <PageContent className="content" content={content} />
         {console.log(content)}
         <ListMembers data={members} />
-        {console.log(members)}
+        {console.log(members.toJS())}
       </div>
     </section>
   );
@@ -44,7 +44,7 @@ const TestPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
-        members={post.frontmatter.members.name}
+        members={post.frontmatter.members}
       />
     </Layout>
   );
