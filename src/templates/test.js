@@ -32,7 +32,7 @@ TestPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   members: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
@@ -68,8 +68,7 @@ export const testPgeQuery = graphql`
       frontmatter {
         title
         members {
-          image {
-            alt
+          imageInfo {
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {
@@ -77,6 +76,7 @@ export const testPgeQuery = graphql`
                 }
               }
             }
+            alt
           }
           name
           position

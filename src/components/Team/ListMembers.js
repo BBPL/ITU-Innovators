@@ -6,11 +6,13 @@ const ListMembers = ({ data }) => (
   <div>
     {data.map((item, i) => (
       <div key={i}>
+        {console.log(item.imageInfo)}
+
         <TeamMember
           name={item.name}
           position={item.position}
           studies={item.studies}
-          imageInfo={item.image}
+          imageInfo={item.imageInfo}
         />
       </div>
     ))}
@@ -20,7 +22,7 @@ const ListMembers = ({ data }) => (
 ListMembers.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
