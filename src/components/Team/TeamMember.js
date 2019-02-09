@@ -5,13 +5,9 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 const TeamMember = ({ name, position, studies, image }) => (
   <div className="member-wrapper">
     <div className="member">
-      <div
-        class="photo"
-        style={{
-          backgroundImage:
-            "url('https://farm5.staticflickr.com/4069/4277734103_d38b5fac84_o.jpg')"
-        }}
-      />
+      <div class="photo">
+        <PreviewCompatibleImage imageInfo={image} />
+      </div>
       <div class="info">
         <h3>{name}</h3>
         <div class="social">
