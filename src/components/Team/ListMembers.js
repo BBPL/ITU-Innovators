@@ -3,21 +3,19 @@ import PropTypes from "prop-types";
 import TeamMember from "./TeamMember";
 
 const ListMembers = ({ data }) => (
-  <div className="members">
-    <div className="container">
-      {data.map((item, i) => (
-        <div key={i}>
-          {console.log(item.image)}
+  <div className="team">
+    {data.map((item, i) => (
+      <div key={i} className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        {console.log(item.image)}
 
-          <TeamMember
-            name={item.name}
-            position={item.position}
-            studies={item.studies}
-            image={item.imageInfo}
-          />
-        </div>
-      ))}
-    </div>
+        <TeamMember
+          name={item.name}
+          position={item.position}
+          studies={item.studies}
+          image={item.imageInfo}
+        />
+      </div>
+    ))}
   </div>
 );
 
