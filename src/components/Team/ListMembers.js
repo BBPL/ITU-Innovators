@@ -6,7 +6,7 @@ const ListMembers = ({ data }) => (
   <div className="container">
     <div className="row team justify-content-md-center">
       {data.map((item, i) => (
-        <div key={i} className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div key={i} className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           {console.log(item.image)}
           <TeamMember
             name={item.name}

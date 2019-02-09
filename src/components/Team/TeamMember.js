@@ -30,15 +30,6 @@ const TeamMember = ({ name, position, studies, image }) => (
           {studies}
         </div>
       </div>
-
-      {/* <PreviewCompatibleImage imageInfo={image} imageStyle="photo" />
-      <div className="info">
-        <h3>{name}</h3>
-        <div className="bio">
-          <h3>{position}</h3>
-          <h4>{studies}</h4>
-        </div>
-      </div> */}
     </div>
   </div>
 );
