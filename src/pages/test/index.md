@@ -8,6 +8,5 @@ members:
   - name: Marek Kisiel
     position: Vice chairman
     studies: SWU 6th semester
-  - name: Philip Korsholm
 ---
 
