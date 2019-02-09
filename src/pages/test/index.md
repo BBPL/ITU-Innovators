@@ -4,7 +4,7 @@ title: Test Page
 members:
   - imageInfo:
       alt: Name
-      image: /img/apple-touch-icon.png
+      image: /img/products-grid1.jpg
     name: Matthias Als
     position: Chairman
     studies: SWU 6th semester
@@ -15,3 +15,4 @@ members:
     position: Vice chairman
     studies: SWU 6th semester
 ---
+
