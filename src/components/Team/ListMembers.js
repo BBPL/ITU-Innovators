@@ -6,13 +6,13 @@ const ListMembers = ({ data }) => (
   <div>
     {data.map((item, i) => (
       <div key={i}>
-        {console.log(item.imageInfo)}
+        {console.log(item.image)}
 
         <TeamMember
           name={item.name}
           position={item.position}
           studies={item.studies}
-          imageInfo={item.imageInfo}
+          image={item.imageInfo}
         />
       </div>
     ))}

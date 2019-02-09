@@ -19,6 +19,7 @@ export const TestPageTemplate = ({
         <h1>{title}</h1>
       </div>
       <div>
+        {console.log(members)}
         <PageContent className="content" content={content} />
         <ListMembers data={members} />
       </div>
