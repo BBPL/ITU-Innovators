@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const TeamMember = ({ name, position, studies, image }) => (
-  <div>
-    {console.log(image)}
-    <PreviewCompatibleImage imageInfo={image} />
-    <h1>{name}</h1>
-    <h2>{position}</h2>
-    <h3>{studies}</h3>
+  <div className="member-container">
+    <div className="member">
+      <PreviewCompatibleImage imageInfo={image} imageStyle="photo" />
+      <div className="info">
+        <h3>{name}</h3>
+        <div className="bio">
+          <h3>{position}</h3>
+          <h4>{studies}</h4>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
