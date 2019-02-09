@@ -14,5 +14,11 @@ members:
     name: Matthias Als
     position: Chairman
     studies: SWU 6th semester
+  - imageInfo:
+      alt: aref
+      image: /img/drawing.jpg
+    name: Testname
+    position: wjatever
+    studies: erere
 ---
 
