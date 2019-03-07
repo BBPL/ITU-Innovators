@@ -20,5 +20,11 @@ members:
     name: Matthias Als
     position: Chairman
     studies: SWU 6th semester
+  - imageInfo:
+      alt: oianwodhoai
+      image: /img/products-grid2.jpg
+    name: Tibo
+    position: Who knows
+    studies: DMD
 ---
 
