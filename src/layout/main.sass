@@ -1,0 +1,40 @@
+$default: #FFEEE4 //light color
+$button-primary: #6F84CC
+$button-secondary: #253F99
+$secondary: #CC836F //brown
+$primary: #A4E8FF 
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Frutiger", Arial, sans-serif
+  font-weight: normal
+  font-style: normal
+
+html 
+  overflow-y: scroll
+
+
+a 
+  transition: color 0.3s
+
+
+a:link, a:visited 
+  color: $default;
+  text-decoration: underline
+
+
+a:active, a:focus, a:hover 
+  color: $primary
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@font-face
+  font-family: "Frutiger"
+  src: url("./fonts/Frutiger.ttf") format("ttf")
+
+@import "mixins"
+
+@import "teammember"
