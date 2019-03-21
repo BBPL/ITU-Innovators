@@ -1,24 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 // #d8e8ea
-const EventDiv = ({ data }) =>(
-    <div className="event-box">
-        <img className="event-image" alt={data.name} src={data.src} />
-        <div className="event-text">
-            <span className="event-title">{data.name}</span>
-            <span className="event-description">{data.description}</span>
-        </div>
+const Event = ({ name, description, src }) => (
+  <div className="event-box">
+    <img className="event-image" alt={name} src={src} />
+    <div className="event-text">
+      <span className="event-title">{name}</span>
+      <span className="event-description">{description}</span>
+      <a href="https://www.facebook.com/" className="event-button">
+        Go to eventee
+      </a>
     </div>
-)
+  </div>
+);
 
-EventDiv.propTypes = {
-    data: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string,
-        description: PropTypes.string,
-        src: PropTypes.string
-      })
-    )
-  };
+Event.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  src: PropTypes.string
+};
 
-export default EventDiv;
+export default Event;
