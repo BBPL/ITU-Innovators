@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import TextArea from '../Input/TextArea';
 import TextField from '../Input/TextField';
 
-const html = ``;
 const PodioForm = class extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +15,6 @@ const PodioForm = class extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.getData = this.getData.bind(this);
     // this.createCORSRequest = this.createCORSRequest.bind(this);
   }
 
@@ -51,46 +49,15 @@ const PodioForm = class extends React.Component {
     }).then( e => console.log(e)).catch(e => console.log(e));
   }
 
-  getData(){
-    console.log("context");
 
-
-    return {__html: `
-    <script src="https://podio.com/webforms/22559549/1592076.js"></script>
-    <script type="text/javascript">
-      _podioWebForm.render("1592076")
-    </script>
-    <noscript>
-      <a href="https://podio.com/webforms/22559549/1592076" target="_blank">Please fill out the form</a>
-    </noscript>
-
-
-    `};
-  }
-  componentDidMount(){
-    console.log("hello");
-    console.log(this.refs.test.innerHTML)
-    this.refs.test.innerHTML = `
-    <script src="https://podio.com/webforms/22559549/1592076.js"></script>
-    <script type="text/javascript">
-      _podioWebForm.render("1592076")
-    </script>
-    <noscript>
-      <a href="https://podio.com/webforms/22559549/1592076" target="_blank">Please fill out the form</a>
-    </noscript>
-    `;
-  }
 
   render(){
     return (
       <div>Hello
-      <script src="https://podio.com/webforms/22559549/1592076.js"></script>
-      <script type="text/javascript">
-      _podioWebForm.render("1592076")
-    </script>
-      {/* <div dangerouslySetInnerHTML={this.getData}/> */}
-      <div ref="test" contentEditable="true"></div>
-      <script src={withPrefix('scripts/podio.js')}></script>
+
+      <div>
+        <script src={withPrefix('scripts/podio.js')}></script>
+      </div>
 
       {/* <iframe class="podio-webform-frame" id="podioWebForm1290503708217" height="680" style="width: 100%; border: none; overflow: scroll !important; height: 938px;" allowtransparency="true" frameborder="0" scrolling="yes" src="https://podio.com/webforms/19169232/1290503?e=true#https%3A%2F%2Fitu-innovators.dk%2Fjoin%2F"></iframe> */}
           {/* // _podioWebForm.render("1592076"); */}
