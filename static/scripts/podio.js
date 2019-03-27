@@ -128,7 +128,7 @@
       var scrollToTop = (msg_components[2] === 'true');
 
       var iframe = document.getElementById(this.iframeId);
-      iframe.style.height = (curHt) + "px";
+      // iframe.style.height = (curHt) + "px";
 
       // Scroll to iframe if there is an error message
       if(scrollToTop) {
