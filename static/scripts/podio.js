@@ -160,6 +160,7 @@
     receiveMessage: receiveMessage
   };
 
+  console.log("should be added now");
 
 })(window);
 
