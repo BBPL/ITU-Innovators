@@ -82,10 +82,15 @@ const PodioForm = class extends React.Component {
 
   render(){
     return (
-      <div>
+      <div>Hello
       <script src="https://podio.com/webforms/22559549/1592076.js"></script>
+      <script type="text/javascript">
+      _podioWebForm.render("1592076")
+    </script>
       {/* <div dangerouslySetInnerHTML={this.getData}/> */}
       <div ref="test" contentEditable="true"></div>
+
+      {/* <iframe class="podio-webform-frame" id="podioWebForm1290503708217" height="680" style="width: 100%; border: none; overflow: scroll !important; height: 938px;" allowtransparency="true" frameborder="0" scrolling="yes" src="https://podio.com/webforms/19169232/1290503?e=true#https%3A%2F%2Fitu-innovators.dk%2Fjoin%2F"></iframe> */}
           {/* // _podioWebForm.render("1592076"); */}
       {/* <noscript> */}
         {/* <a href="https://podio.com/webforms/22559549/1592076" target="_blank">Please fill out the form</a> */}
