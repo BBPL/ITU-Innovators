@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
+import PodioForm from "../components/Form/PodioForm";
 
 export const TestPageTemplate = ({
   title,
@@ -21,7 +22,10 @@ export const TestPageTemplate = ({
       <div>
         {console.log(members)}
         <PageContent className="content" content={content} />
+
+        <PodioForm />
         <ListMembers data={members} />
+
       </div>
     </section>
   );

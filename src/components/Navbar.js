@@ -3,8 +3,12 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 
+const netlifyIdentity = require("netlify-identity-widget");
+
 const Navbar = class extends React.Component {
   componentDidMount() {
+    netlifyIdentity.init();
+
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(
       document.querySelectorAll(".navbar-burger"),
@@ -34,6 +38,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
+        <div data-netlify-identity-menu></div>
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
