@@ -166,3 +166,4 @@
 
 _podioWebForm.configure(1592076, {"height":730,"frameUrl":"https://podio.com/webforms/22559549/1592076?e=true","disabledUrl":"https://podio.com/webforms/22559549/1592076/disabled","allowedDomains":["dev.itu-innovators.dk"],"theme":"flatly"});
 _podioWebForm.render("1592076");
+console.log("should be added now");
