@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as Danger  from "dangerously-set-inner-html"
 import PropTypes from 'prop-types';
 import TextArea from '../Input/TextArea';
 import TextField from '../Input/TextField';
