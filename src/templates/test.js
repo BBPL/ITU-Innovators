@@ -5,12 +5,13 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
 import PodioForm from "../components/Form/PodioForm";
+import Structure from "../components/Structure/Structure";
 
 export const TestPageTemplate = ({
   title,
   content,
   contentComponent,
-  members
+  members,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -25,7 +26,7 @@ export const TestPageTemplate = ({
 
         <PodioForm />
         <ListMembers data={members} />
-
+        <Structure />
       </div>
     </section>
   );
@@ -40,9 +41,9 @@ TestPageTemplate.propTypes = {
       imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
-      studies: PropTypes.string
+      studies: PropTypes.string,
     })
-  )
+  ),
 };
 
 const TestPage = ({ data }) => {
@@ -61,7 +62,7 @@ const TestPage = ({ data }) => {
 };
 
 TestPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default TestPage;
