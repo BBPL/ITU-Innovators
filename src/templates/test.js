@@ -4,12 +4,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
+import Footer from "../components/Footer"
 
 export const TestPageTemplate = ({
   title,
   content,
   contentComponent,
-  members
+  members,
+  footer
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -22,6 +24,9 @@ export const TestPageTemplate = ({
         {console.log(members)}
         <PageContent className="content" content={content} />
         <ListMembers data={members} />
+      </div>
+      <div>
+        <Footer data={footer}/>
       </div>
     </section>
   );
@@ -39,6 +44,7 @@ TestPageTemplate.propTypes = {
       studies: PropTypes.string
     })
   )
+
 };
 
 const TestPage = ({ data }) => {
