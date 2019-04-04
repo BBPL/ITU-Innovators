@@ -27,15 +27,13 @@ members:
     position: Who knows
     studies: DMD
 footer:
-  texts:
-    - text: Rued Langgaards Vej 7, 2300 København
-    - text: contact@itu-innovators.dk
-    - text: + 45 12 34 56 78
-  links:
-    - link: Find us
-    - link: Facebook
-    - link: LinkedIn
-    - link: Twitter
+  - info:
+      address: Rued Langgaards Vej 7, 2300 København
+      email: contact@itu-innovators.dk
+      phone: + 45 12 34 56 78
+      links:
+        - link: "https://google.com"
+          title: Find us
+        - link: "https://itu.dk/"
+          title: ITU
 ---
-
-

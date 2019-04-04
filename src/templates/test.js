@@ -4,14 +4,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer/Footer";
 
 export const TestPageTemplate = ({
   title,
   content,
   contentComponent,
   members,
-  footer
+  footer,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -26,7 +26,7 @@ export const TestPageTemplate = ({
         <ListMembers data={members} />
       </div>
       <div>
-        <Footer data={footer}/>
+        <Footer footer={footer} />
       </div>
     </section>
   );
@@ -41,10 +41,20 @@ TestPageTemplate.propTypes = {
       imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
-      studies: PropTypes.string
+      studies: PropTypes.string,
     })
-  )
-
+  ),
+  footer: PropTypes.arrayOf({
+    info: PropTypes.objectOf({
+      address: PropTypes.string,
+      email: PropTypes.string,
+      phone: PropTypes.string,
+      links: PropTypes.arrayOf({
+        link: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    }),
+  }),
 };
 
 const TestPage = ({ data }) => {
@@ -57,13 +67,14 @@ const TestPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         members={post.frontmatter.members}
+        footer={post.frontmatter.footer[0]}
       />
     </Layout>
   );
 };
 
 TestPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default TestPage;
@@ -88,6 +99,17 @@ export const testPgeQuery = graphql`
           name
           position
           studies
+        }
+        footer {
+          info {
+            email
+            address
+            phone
+            links {
+              link
+              title
+            }
+          }
         }
       }
     }
