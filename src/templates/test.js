@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
 import Footer from "../components/Footer/Footer";
+import ScrollingGallery from "./components/ScrollingGallery";
 
 export const TestPageTemplate = ({
   title,
@@ -14,7 +15,10 @@ export const TestPageTemplate = ({
   footer,
 }) => {
   const PageContent = contentComponent || Content;
-
+  const images = {
+    {alt="asd", src="asd"},
+    {alt="asd", src="asd"}
+  };
   return (
     <section>
       <div>
@@ -24,6 +28,7 @@ export const TestPageTemplate = ({
         {console.log(members)}
         <PageContent className="content" content={content} />
         <ListMembers data={members} />
+        <ScrollingGallery images={images} />
       </div>
       <div>
         <Footer footer={footer} />
