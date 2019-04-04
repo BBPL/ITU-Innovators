@@ -4,13 +4,15 @@ import PropTypes from "prop-types";
 const Event = ({ name, description, src }) => (
   <div className="event-box">
     <img className="event-image" alt={name} src={src} />
-    <div className="event-text">
-      <span className="event-title">{name}</span>
-      <span className="event-description">{description}</span>
-      <a href="https://www.facebook.com/" className="event-button">
-        Go to eventee
-      </a>
-    </div>
+
+      <div className="event-text">
+        <span className="event-title">{name}</span>
+        <span className="event-description">{description}</span>
+        <a href="https://www.facebook.com/" className="event-button">
+          Go to event
+        </a>
+      </div>
+
   </div>
 );
 
