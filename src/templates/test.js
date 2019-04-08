@@ -49,8 +49,6 @@ TestPageTemplate.propTypes = {
       studies: PropTypes.string,
     })
   ),
-<<<<<<< HEAD
-=======
   footer: PropTypes.arrayOf({
     info: PropTypes.objectOf({
       address: PropTypes.string,
@@ -62,7 +60,6 @@ TestPageTemplate.propTypes = {
       }),
     }),
   }),
->>>>>>> 332fbb0cedaef949787a1957e81d9610120efda5
 };
 
 const TestPage = ({ data }) => {
