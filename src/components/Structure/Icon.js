@@ -1,6 +1,6 @@
 import React from "react";
 
-export const structure = (
+export const structure = ({ updateModalState }) => (
   <svg
     version="1.1"
     id="Layer_1"
