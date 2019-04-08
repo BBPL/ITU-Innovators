@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: develop
 
 media_folder: static/img
 public_folder: /img
@@ -39,12 +39,19 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { 
             label: "Members",
-            name: "Members",
+            name: "members",
             widget: list,
             fields: [
                 {label: "Name", name: "name", widget: string},
                 {label: "Position", name: "position", widget: string},
                 {label: "Studies", name: "studies", widget: string},
+                {label: "ImageInfo", name: "imageInfo", widget: object,
+                  fields:
+                    [
+                      {label: Image, name: image, widget: image},
+                      {label: Alt, name: alt, widget: string}
+                    ]
+                }                
             ],
           }
       - file: "src/pages/about/index.md"

@@ -19,8 +19,8 @@ export const TestPageTemplate = ({
         <h1>{title}</h1>
       </div>
       <div>
+        {console.log(members)}
         <PageContent className="content" content={content} />
-        {console.log(content)}
         <ListMembers data={members} />
       </div>
     </section>
@@ -33,6 +33,7 @@ TestPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   members: PropTypes.arrayOf(
     PropTypes.shape({
+      imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       name: PropTypes.string,
       position: PropTypes.string,
       studies: PropTypes.string
@@ -68,6 +69,16 @@ export const testPgeQuery = graphql`
       frontmatter {
         title
         members {
+          imageInfo {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
           name
           position
           studies
