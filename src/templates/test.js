@@ -6,12 +6,14 @@ import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
 import PodioForm from "../components/Form/PodioForm";
 import Structure from "../components/Structure/Structure";
+import Footer from "../components/Footer/Footer";
 
 export const TestPageTemplate = ({
   title,
   content,
   contentComponent,
   members,
+  footer,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -27,6 +29,9 @@ export const TestPageTemplate = ({
         <PodioForm />
         <ListMembers data={members} />
         <Structure />
+      </div>
+      <div>
+        <Footer footer={footer} />
       </div>
     </section>
   );
@@ -44,6 +49,20 @@ TestPageTemplate.propTypes = {
       studies: PropTypes.string,
     })
   ),
+<<<<<<< HEAD
+=======
+  footer: PropTypes.arrayOf({
+    info: PropTypes.objectOf({
+      address: PropTypes.string,
+      email: PropTypes.string,
+      phone: PropTypes.string,
+      links: PropTypes.arrayOf({
+        link: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    }),
+  }),
+>>>>>>> 332fbb0cedaef949787a1957e81d9610120efda5
 };
 
 const TestPage = ({ data }) => {
@@ -56,6 +75,7 @@ const TestPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         members={post.frontmatter.members}
+        footer={post.frontmatter.footer[0]}
       />
     </Layout>
   );
@@ -87,6 +107,17 @@ export const testPgeQuery = graphql`
           name
           position
           studies
+        }
+        footer {
+          info {
+            email
+            address
+            phone
+            links {
+              link
+              title
+            }
+          }
         }
       }
     }
