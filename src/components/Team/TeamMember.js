@@ -5,26 +5,26 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 const TeamMember = ({ name, position, studies, image }) => (
   <div className="member-wrapper">
     <div className="member">
-      <div class="photo">
+      <div className="photo">
         <PreviewCompatibleImage imageInfo={image} />
       </div>
-      <div class="info">
+      <div className="info">
         <h3>{name}</h3>
-        <div class="social">
+        <div className="social">
           <a href="#">
-            <i class="fa fa-facebook" />
+            <i className="fa fa-facebook" />
           </a>
           <a href="#">
-            <i class="fa fa-linkedin" />
+            <i className="fa fa-linkedin" />
           </a>
           <a href="#">
-            <i class="fa fa-google-plus" />
+            <i className="fa fa-google-plus" />
           </a>
           <a href="#">
-            <i class="fa fa-envelope" />
+            <i className="fa fa-envelope" />
           </a>
         </div>
-        <div class="bio">
+        <div className="bio">
           <h4>Bio:</h4>
           {position}
           {studies}
