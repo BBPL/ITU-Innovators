@@ -7,11 +7,13 @@ import ListMembers from "../components/Team/ListMembers";
 import PodioForm from "../components/Form/PodioForm";
 import Structure from "../components/Structure/Structure";
 import Footer from "../components/Footer/Footer";
+import Banner from "../components/Banner/Banner"
 
 export const TestPageTemplate = ({
   title,
   content,
   contentComponent,
+  banner,
   members,
   footer,
 }) => {
@@ -21,6 +23,9 @@ export const TestPageTemplate = ({
     <section>
       <div>
         <h1>{title}</h1>
+      </div>
+      <div>
+        <Banner banner={banner}/>
       </div>
       <div>
         {console.log(members)}
@@ -41,6 +46,12 @@ TestPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  banner: PropTypes.arrayOf({
+    info: PropTypes.objectOf({
+        bannerHeader: PropTypes.string,
+        bannerParagraph: PropTypes.string,
+    }),
+  }),
   members: PropTypes.arrayOf(
     PropTypes.shape({
       imageInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -71,6 +82,7 @@ const TestPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        banner={post.frontmatter.banner[0]}
         members={post.frontmatter.members}
         footer={post.frontmatter.footer[0]}
       />
@@ -90,6 +102,12 @@ export const testPgeQuery = graphql`
       html
       frontmatter {
         title
+        banner {
+          info {
+            bannerHeader
+            bannerParagraph
+          }
+        }
         members {
           imageInfo {
             image {

@@ -1,6 +1,10 @@
 ---
 templateKey: test
-title: Test Page
+title: Innovatoris
+banner:
+  - info:
+      bannerHeader: Welcome to ITU Innovators
+      bannerParagraph: Bacon ipsum dolor amet strip steak pancetta ball tip turducken, turkey t-bone spare ribs ham kielbasa cupim ribeye. Beef shank flank leberkas pork chop sirloin prosciutto capicola rump ham meatball jerky alcatra burgdoggen.
 members:
   - imageInfo:
       alt: aref

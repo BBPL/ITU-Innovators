@@ -9,6 +9,7 @@ const TestPagePreview = ({ entry, getAsset }) => {
   return (
     <TestPageTemplate
       title={entry.getIn(["data", "title"])}
+      banner={entry.getIn(["data","banner"])}
       members={listMembers}
     />
   );
