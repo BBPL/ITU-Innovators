@@ -49,8 +49,8 @@ TestPageTemplate.propTypes = {
       studies: PropTypes.string,
     })
   ),
-  panel: PropTypes.arrayOf({
-    info: PropTypes.objectOf({
+  panel: PropTypes.objectOf({
+    titles: PropTypes.objectOf({
       title: PropTypes.string,
       content: PropTypes.string,
     }),
@@ -78,6 +78,7 @@ const TestPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         members={post.frontmatter.members}
+        panel={post.frontmatter.panel}
         footer={post.frontmatter.footer[0]}
       />
     </Layout>
@@ -121,6 +122,10 @@ export const testPgeQuery = graphql`
               title
             }
           }
+        }
+        panel {
+          title
+          content
         }
       }
     }
