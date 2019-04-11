@@ -26,6 +26,15 @@ members:
     name: Tibo
     position: Who knows
     studies: DMD
+panel:
+  - info:
+    titles:
+      - title: "Our goal"
+        content: "blaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaa aaaaaaa aaaaaaaaaa."
+      - title: "Events"
+        content: "blaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaa aaaaaaa aaaaaaaaaa."
+      - title: "Improve student life"
+        content: "blaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaa aaaaaaa aaaaaaaaaa."
 footer:
   - info:
       address: Rued Langgaards Vej 7, 2300 København

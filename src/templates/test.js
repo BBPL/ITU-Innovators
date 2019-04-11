@@ -5,11 +5,13 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
 import Footer from "../components/Footer/Footer";
+import Panel from "../components/Panel/Panel";
 
 export const TestPageTemplate = ({
   title,
   content,
   contentComponent,
+  panel,
   members,
   footer,
 }) => {
@@ -24,6 +26,9 @@ export const TestPageTemplate = ({
         {console.log(members)}
         <PageContent className="content" content={content} />
         <ListMembers data={members} />
+      </div>
+      <div>
+        <Panel panel={panel} />
       </div>
       <div>
         <Footer footer={footer} />
@@ -44,6 +49,12 @@ TestPageTemplate.propTypes = {
       studies: PropTypes.string,
     })
   ),
+  panel: PropTypes.arrayOf({
+    info: PropTypes.objectOf({
+      title: PropTypes.string,
+      content: PropTypes.string,
+    }),
+  }),
   footer: PropTypes.arrayOf({
     info: PropTypes.objectOf({
       address: PropTypes.string,
