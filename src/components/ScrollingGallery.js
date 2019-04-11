@@ -24,22 +24,26 @@ const ScrollingGallery = ({ images }) => (
 function hide(){
   for (let index = 0; index < maxImages; index++) {
     const image = document.getElementById("image-"+index)
-    if (index >= displayFrom && index <= displayFrom+2) {
-      image.style.display= "inline"
-    }
-    else{
-      image.style.display= "none"
-    }
+    image.style.display= "none"
+  }
+  let tempPos = displayFrom
+  for (let index = 0; index < 3; index++) {
+    console.log(tempPos);
+
+    const image = document.getElementById("image-"+tempPos)
+    image.style.display= "inline"
+    image.style.order= index
+    tempPos = (tempPos + 1)% maxImages
   }
 }
 
 function prev(){
-  if(displayFrom > 0) displayFrom-=3
+  displayFrom = (displayFrom-3) % maxImages
   hide()
 }
 
 function next(){
-  if(displayFrom < maxImages-1) displayFrom+=3
+  displayFrom = (displayFrom+3) % maxImages
   hide()
 }
 
