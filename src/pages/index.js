@@ -11,6 +11,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <Button text="Click me" link="https://www.google.dk/"/>
         <section className="section">
           <div className="container">
             <div className="content">
