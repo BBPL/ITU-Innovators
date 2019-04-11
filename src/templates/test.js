@@ -4,6 +4,8 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ListMembers from "../components/Team/ListMembers";
+import PodioForm from "../components/Form/PodioForm";
+import Structure from "../components/Structure/Structure";
 import Footer from "../components/Footer/Footer";
 import ScrollingGallery from "../components/ScrollingGallery";
 
@@ -32,8 +34,11 @@ export const TestPageTemplate = ({
       <div>
         {console.log(members)}
         <PageContent className="content" content={content} />
+
+        <PodioForm />
         <ListMembers data={members} />
         <ScrollingGallery images={images} />
+        <Structure />
       </div>
       <div>
         <Footer footer={footer} />
