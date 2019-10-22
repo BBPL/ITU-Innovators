@@ -38,7 +38,6 @@ const FrontPage = ({ data }) => {
     <Layout>
       <FrontPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
         content={post.html}
       />
     </Layout>

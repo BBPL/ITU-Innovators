@@ -26,5 +26,14 @@ members:
     name: Tibo
     position: Who knows
     studies: DMD
+footer:
+  - info:
+      address: Rued Langgaards Vej 7, 2300 København
+      email: contact@itu-innovators.dk
+      phone: + 45 12 34 56 78
+      links:
+        - link: "https://google.com"
+          title: Find us
+        - link: "https://itu.dk/"
+          title: ITU
 ---
-
