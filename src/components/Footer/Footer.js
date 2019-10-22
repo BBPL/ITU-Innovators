@@ -21,7 +21,7 @@ const Footer = ({ footer }) => (
     </footer>
   </div>
 );
-
+/*
 Footer.PropTypes = {
   footer: PropTypes.objectOf({
     info: PropTypes.objectOf({
@@ -35,5 +35,5 @@ Footer.PropTypes = {
     }),
   }),
 };
-
+*/
 export default Footer;

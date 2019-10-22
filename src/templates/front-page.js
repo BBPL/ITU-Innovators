@@ -3,24 +3,19 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import HeroBanner from '../components/HeroBanner'
+import ScrollingGallery from '../components/ScrollingGallery'
+import FeatureGrid from '../components/Features'
 
-export const FrontPageTemplate = ({ title, content, contentComponent }) => {
+export const FrontPageTemplate = ({ title, content, contentComponent, bannerUrl, mediaImages }) => {
   const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
+        <HeroBanner url={bannerUrl}/>
+        <ScrollingGallery images={mediaImages}/>
+        <ScrollingGallery images={[]}/>
+        <FeatureGrid gridItems={[]} />
     </section>
   )
 }
@@ -29,6 +24,8 @@ FrontPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  bannerUrl: PropTypes.string.isRequired,
+  mediaImages: PropTypes.any.isRequired
 }
 
 const FrontPage = ({ data }) => {
@@ -39,6 +36,9 @@ const FrontPage = ({ data }) => {
       <FrontPageTemplate
         contentComponent={HTMLContent}
         content={post.html}
+        title={post.frontmatter.title}
+        bannerUrl={post.frontmatter.bannerUrl}
+        mediaImages={post.frontmatter.mediaImages}
       />
     </Layout>
   )
@@ -56,6 +56,11 @@ export const frontPageQuery = graphql`
       html
       frontmatter {
         title
+        bannerUrl
+        mediaImages {
+          url
+          alt
+        }
       }
     }
   }

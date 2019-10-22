@@ -1,6 +1,14 @@
 ---
 templateKey: front-page
 title: Frontpage
+bannerUrl: www.google.dk
+mediaImages:
+    - url: www.google.dk
+      alt: text
+
+    - url: www.youtube.dk
+      alt: text2
+# sponsorImages:
 ---
 ### Helping students become entrepreneurs
 
