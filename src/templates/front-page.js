@@ -7,15 +7,15 @@ import HeroBanner from '../components/HeroBanner'
 import ScrollingGallery from '../components/ScrollingGallery'
 import FeatureGrid from '../components/Features'
 
-export const FrontPageTemplate = ({ title, content, contentComponent, bannerUrl, mediaImages }) => {
+export const FrontPageTemplate = ({ title, content, contentComponent, bannerUrl, mediaImages, sponsorImages, featureGridItems}) => {
   const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
         <HeroBanner url={bannerUrl}/>
         <ScrollingGallery images={mediaImages}/>
-        <ScrollingGallery images={[]}/>
-        <FeatureGrid gridItems={[]} />
+        <ScrollingGallery images={sponsorImages}/>
+        <FeatureGrid gridItems={featureGridItems} />
     </section>
   )
 }
@@ -25,7 +25,9 @@ FrontPageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   bannerUrl: PropTypes.string.isRequired,
-  mediaImages: PropTypes.any.isRequired
+  mediaImages: PropTypes.any.isRequired,
+  sponsorImages: PropTypes.any.isRequired,
+  featureGridItems: PropTypes.any.isRequired
 }
 
 const FrontPage = ({ data }) => {
@@ -39,6 +41,8 @@ const FrontPage = ({ data }) => {
         title={post.frontmatter.title}
         bannerUrl={post.frontmatter.bannerUrl}
         mediaImages={post.frontmatter.mediaImages}
+        sponsorImages={post.frontmatter.sponsorImages}
+        featureGridItems={post.frontmatter.featureGridItems}
       />
     </Layout>
   )
@@ -58,6 +62,14 @@ export const frontPageQuery = graphql`
         title
         bannerUrl
         mediaImages {
+          url
+          alt
+        }
+        sponsorImages {
+          url
+          alt
+        }
+        featureGridItems {
           url
           alt
         }

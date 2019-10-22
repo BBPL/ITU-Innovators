@@ -8,7 +8,13 @@ mediaImages:
 
     - url: www.youtube.dk
       alt: text2
-# sponsorImages:
+sponsorImages:
+    - url: www.google.dk
+      alt: text
+
+featureGridItems:
+    - url: www.google.dk
+      alt: text
 ---
 ### Helping students become entrepreneurs
 
