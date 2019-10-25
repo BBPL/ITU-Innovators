@@ -22,18 +22,18 @@ const Footer = ({ footer }) => (
   </div>
 );
 
-Footer.PropTypes = {
-  footer: PropTypes.objectOf({
-    info: PropTypes.objectOf({
-      address: PropTypes.string,
-      email: PropTypes.string,
-      phone: PropTypes.string,
-      links: PropTypes.arrayOf({
-        link: PropTypes.string,
-        title: PropTypes.string,
-      }),
-    }),
-  }),
-};
+// Footer.PropTypes = {
+//   footer: PropTypes.objectOf({
+//     info: PropTypes.objectOf({
+//       address: PropTypes.string,
+//       email: PropTypes.string,
+//       phone: PropTypes.string,
+//       links: PropTypes.arrayOf({
+//         link: PropTypes.string,
+//         title: PropTypes.string,
+//       }),
+//     }),
+//   }),
+// };
 
 export default Footer;
