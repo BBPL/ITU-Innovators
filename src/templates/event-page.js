@@ -1,0 +1,76 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Event from '../components/Event'
+
+export const EventPageTemplate = ({ title, events }) => {
+  return (
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="section">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
+
+              {
+                events.map((item, index) => (
+                  <Event id={index} name={item.name} description={item.description} src={item.src} />
+                  )
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+EventPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      description: PropTypes.string,
+      src: PropTypes.string
+    })
+  )
+};
+
+const EventPage = ({ data }) => {
+  const { markdownRemark: post } = data
+
+  return (
+    <Layout>
+      <EventPageTemplate
+        title={post.frontmatter.title}
+        events={post.frontmatter.events}
+      />
+    </Layout>
+  )
+}
+
+EventPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default EventPage
+
+export const eventPageQuery = graphql`
+  query EventPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        events {
+          name
+          description
+          src
+        }
+      }
+    }
+  }
+`
