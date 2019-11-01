@@ -11,16 +11,16 @@ const TeamMember = ({ name, position, studies, image }) => (
       <div className="info">
         <h3>{name}</h3>
         <div className="social">
-          <a href="#">
+          <a href="/">
             <i className="fa fa-facebook" />
           </a>
-          <a href="#">
+          <a href="/">
             <i className="fa fa-linkedin" />
           </a>
-          <a href="#">
+          <a href="/">
             <i className="fa fa-google-plus" />
           </a>
-          <a href="#">
+          <a href="/">
             <i className="fa fa-envelope" />
           </a>
         </div>
@@ -38,7 +38,7 @@ TeamMember.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   name: PropTypes.string,
   position: PropTypes.string,
-  studies: PropTypes.string
+  studies: PropTypes.string,
 };
 
 export default TeamMember;

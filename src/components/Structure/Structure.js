@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
-import { structure } from "./Icon";
+// import { structure } from "./Icon";
 import "./Structure.scss";
 
 class Structure extends React.Component {
