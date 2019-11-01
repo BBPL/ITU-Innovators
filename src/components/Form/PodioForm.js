@@ -1,14 +1,10 @@
-import React, { Component } from "react";
-import { withPrefix } from "gatsby";
-import PropTypes from "prop-types";
-import TextArea from "../Input/TextArea";
-import TextField from "../Input/TextField";
+import React from "react";
+// import { withPrefix } from "gatsby";
+// import PropTypes from "prop-types";
+// import TextArea from "../Input/TextArea";
+// import TextField from "../Input/TextField";
 
 const PodioForm = class extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
